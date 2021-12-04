@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+}
+
+@media screen and (max-width: 499px) {
+    .container {
+        max-width: 400px;
+    }
+
+    .even {
+        flex-basis: 17%;
+    }
+
+    .odd {
+        flex-grow: 1;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .container {
+        max-width: 500px;
+    }
+
+    .item {
+        flex-basis: 25%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .item {
+        flex-basis: unset;
+    }
+
+    .item:nth-child(3),
+    .item:nth-child(4) {
+        flex-grow: 1;
+    }
+}
